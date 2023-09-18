@@ -20,6 +20,7 @@ export function Home() {
     }
     setPasswordValue(password)
     setModalVisible(true)
+    
   }
 
   return (

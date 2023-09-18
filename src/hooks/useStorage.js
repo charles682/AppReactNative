@@ -24,6 +24,19 @@ const useStorage = () =>{
             console.log("ERROR AO SALVAR", error)
         }
     }
+
+ // Salvar Nome da senha
+ const saveNome = async (key, value) => {
+    try {
+        let nome = await getNome(key);
+        nome.push(value);
+
+        await AsyncStorage.setItem(key, JSON.stringify(nome));
+    } catch (error) {
+        console.log("ERROR AO SALVAR", error);
+    }
+}
+
     // Remover algo do storage
     const removeItem = async(key, item) =>{
         try{
@@ -40,6 +53,7 @@ const useStorage = () =>{
     return{
         getItem,
         saveItem,
+        saveNome,
         removeItem
     }
 

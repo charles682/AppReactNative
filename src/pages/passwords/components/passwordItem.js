@@ -1,29 +1,36 @@
 import React, {useState} from 'react'
-import { View,Text, TextInput, StyleSheet, Pressable, TouchableOpacity} from 'react-native'
+import { View, TextInput, StyleSheet, Pressable, TouchableOpacity, Button} from 'react-native'
 import {Ionicons} from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons';
 
 
-export  function PasswordItem({data, removePassword}){
-  
-    const [hidePass, setHidePass] = useState(true);
+export  function PasswordItem({data, removePassword }){
+ const [hidePass, setHidePass] = useState(true)
+
+
 
     return(
         <View >
-        <Text  style={styles.text}  >
-              dsbsbn n
-        </Text>
-        <Pressable onLongPress={removePassword} style={styles.container}>
-            <Text
-             style={styles.text}
+            
+        <Pressable  style={styles.container}>
+            <TextInput
+             style={styles.text } 
+             secureTextEntry={hidePass}
              >
                 {data}
-            </Text>
+            </TextInput>
             <TouchableOpacity style={styles.icon} onPress={() => setHidePass(!hidePass)}>
                 { hidePass ?
-                    <Ionicons name='eye' color="#fff" size={25}/>
-                :
                 <Ionicons name='eye-off' color="#fff" size={25}/>
+                   
+                :
+                <Ionicons name='eye' color="#fff" size={25}/>
+                
                 }
+             <Pressable onPressIn={removePassword}>
+             <MaterialIcons name="delete-outline" size={24} color="black"  />
+             </Pressable>
+             
             </TouchableOpacity>
             
         </Pressable>
@@ -55,11 +62,12 @@ const styles = StyleSheet.create({
      
     },
     icon:{
-       
-            width:'15%',
+            width:'22%',
             height:50,
-            justifyContent:"center",
-            alignItems:"center"
+            justifyContent:"space-between",
+            alignItems:"center",
+            flexDirection:"row",
+           
         }
     }
 );
