@@ -1,16 +1,19 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
-import {Home} from  './pages/home'
-import {Passwords} from './pages/passwords'
+import {Home} from  '../pages/Home'
+import {Passwords} from '../pages/passwords'
 import {Ionicons} from '@expo/vector-icons'
-import {Settings} from './pages/settings' 
-import {Login} from './pages/login'
+import {Settings} from '../pages/settings' 
+
 
 const Tab = createBottomTabNavigator();
 
 
-export function Routes(){
+export function BottonRoutes(){
     return(
-        <Tab.Navigator>
+        
+        <Tab.Navigator
+            
+        >
 
                 <Tab.Screen
                 name="settings"
@@ -29,7 +32,7 @@ export function Routes(){
 
 
             <Tab.Screen
-                name="home"
+                name="Home"
                 component={Home}
                 options={{
                     tabBarShowLabel:false, /// desabilita o nome embaixo do icon
@@ -58,21 +61,7 @@ export function Routes(){
                 }}
             />
 
-            <Tab.Screen
-                name="login"
-                component={Login}
-                options={{
-                    tabBarShowLabel:false, /// desabilita o nome embaixo do icon
-                    headerShown: false, /// excluir o header em cima da pagina
-                    tabBarIcon:({focused, size, color}) =>{
-                        if(focused){
-                            return <Ionicons size={size} color={color} name="log-in"/>
-                        }
-                        return <Ionicons size={size} color={color} name="log-in-outline"/>
-                    }
-                }}
-            />
-   
+          
         </Tab.Navigator>
     )
 }

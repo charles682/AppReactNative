@@ -28,7 +28,7 @@ export  function PasswordItem({data, removePassword }){
                 
                 }
              <Pressable onPressIn={removePassword}>
-             <MaterialIcons name="delete-outline" size={24} color="black"  />
+             <MaterialIcons name="delete-outline" size={24} color="#fff"  />
              </Pressable>
              
             </TouchableOpacity>

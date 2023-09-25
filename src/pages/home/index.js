@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, Modal} from 'react-nat
 import Slider from '@react-native-community/slider'
 import {ModalPassword} from '../../components/modal'
 
+
 let charset = "abcdefghijklmnopqrstuvwxyz0123456789"
 
 export function Home() {
