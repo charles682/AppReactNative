@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 
     },
     containerHeader:{
-        marginTop:"14",
+        marginTop:14,
         marginBottom:"8%",
         paddingStart:"5%"
     },
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         fontSize:18,
         fontWeight:"bold"
     },
+    
     buttonRegister:{
         marginTop:14,
         center:"center"

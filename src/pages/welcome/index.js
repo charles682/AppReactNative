@@ -12,8 +12,8 @@ export function Welcome() {
             <Animatable.Image
                 animation="slideInDown"
                 iterationCount={5} direction="alternate"
-                source={require('../../img/logo.png')}
-                style={{width:'57%'}}
+                source={require('../../assets/logo.png')}
+                style={{width:'50%', height:"57%"}}
              
             />
           </View>
@@ -39,7 +39,7 @@ export function Welcome() {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:'#392de9'
+        backgroundColor:'#fff'
     },
     containerLogo:{
         flex:2,
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     containerForm:{
         flex:1,
-        backgroundColor:"#fff",
+        backgroundColor:"#392de9",
         borderTopLeftRadius:25,
         borderTopRightRadius:25,
         paddingStart:"5%",
@@ -60,13 +60,14 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         marginTop:28,
         marginBottom:12,
+        color:"#FFF"
     },
     text:{
         color:"#a1a1a1"
     },
     button:{
         position:"absolute",
-        backgroundColor:"#392de9",
+        backgroundColor:"#fff",
         borderRadius:50,
         paddingVertical:8,
         width:"60%",
@@ -74,10 +75,11 @@ const styles = StyleSheet.create({
         bottom:"15%",
         alignItems:"center",
         justifyContent:"center",
+       
     },
     buttonText:{
         fontSize:18,
-        color:"#fff",
+        color:"#392de9",
         fontWeight:"bold"
     }
 })
